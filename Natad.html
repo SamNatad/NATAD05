@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sam Natad — Aspiring Software Engineer</title>
+<meta name="description" content="Portfolio of Sam Natad, a 2026 BSIT graduate looking for a junior developer role. Desktop applications in Java and C#, plus a portfolio site built from scratch in HTML and CSS.">
+<meta name="author" content="Sam Natad">
+<meta name="color-scheme" content="dark light">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sam Natad — Aspiring Software Engineer">
+<meta property="og:description" content="2026 BSIT graduate. Java, C#, HTML and CSS. Learning in public, looking for a junior developer role.">
+<link rel="stylesheet" href="Sam.CSS">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%235b9dff'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%23061019f' text-anchor='middle'>SN</text></svg>">
+</head>
+
+<body>
+
+<!-- ══════════ ICON SPRITE (inline, zero dependencies) ══════════ -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8.5 8-4 4 4 4M15.5 8l4 4-4 4M13.6 5.2l-3.2 13.6"/></symbol>
+    <symbol id="i-term" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="m6.5 10 3 3-3 3M12.5 16h5"/></symbol>
+    <symbol id="i-java" viewBox="0 0 24 24"><path d="M4 8.5h13V14a5.5 5.5 0 0 1-5.5 5.5h-2A5.5 5.5 0 0 1 4 14V8.5Z"/><path d="M17 10h1.8a2.4 2.4 0 0 1 0 4.8H17"/><path d="M8.5 3.5v2.2M12 2.8v2.9"/></symbol>
+    <symbol id="i-cs" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4.5"/><path d="m9.5 7.5-2.2 9M15.5 7.5l-2.2 9M6 10.5h11.5M5.4 14h11.5"/></symbol>
+    <symbol id="i-html" viewBox="0 0 24 24"><path d="M12 2.8 3.8 5.9v6.2c0 5 3.6 8.1 8.2 9.1 4.6-1 8.2-4.1 8.2-9.1V5.9L12 2.8Z"/><path d="M10.3 9.2h3.3a1.6 1.6 0 0 1 0 3.2h-2.4a1.6 1.6 0 0 0 0 3.2h3.4"/></symbol>
+    <symbol id="i-css" viewBox="0 0 24 24"><path d="M12 2.8 3.8 5.9v6.2c0 5 3.6 8.1 8.2 9.1 4.6-1 8.2-4.1 8.2-9.1V5.9L12 2.8Z"/><path d="M9 9.2h4.4a1.7 1.7 0 0 1 0 3.4h-3a1.7 1.7 0 0 0 0 3.4H15"/></symbol>
+    <symbol id="i-js" viewBox="0 0 24 24"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="4.5"/><path d="M11 9.5v5.6a1.9 1.9 0 0 1-3.8 0"/><path d="M16.8 9.5v4.2a1.9 1.9 0 0 0 3.8 0V9.5"/></symbol>
+    <symbol id="i-sql" viewBox="0 0 24 24"><ellipse cx="12" cy="5.6" rx="7.8" ry="2.9"/><path d="M4.2 5.6v12.8c0 1.6 3.5 2.9 7.8 2.9s7.8-1.3 7.8-2.9V5.6"/><path d="M4.2 12c0 1.6 3.5 2.9 7.8 2.9s7.8-1.3 7.8-2.9"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24"><circle cx="7" cy="5.2" r="2.5"/><circle cx="7" cy="18.8" r="2.5"/><circle cx="17.2" cy="18.8" r="2.5"/><path d="M7 7.7v8.6"/><path d="M17.2 16.3v-3a5 5 0 0 0-5-5H9.5"/></symbol>
+    <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" stroke="none" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A7.995 7.995 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></symbol>
+    <symbol id="i-ide" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 8.8h19"/><path d="M5.6 6.4h.01M8 6.4h.01"/><path d="m7.6 13-2 2.2 2 2.2M14.4 13l2 2.2-2 2.2M12.6 12.2l-1.9 6.2"/></symbol>
+    <symbol id="i-vsc" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4.5"/><path d="m9.4 9.4 3 2.6-3 2.6M13.4 15h3.2"/></symbol>
+    <symbol id="i-vs" viewBox="0 0 24 24"><path d="M8.6 8.2 3.8 12l4.8 3.8M15.4 8.2 20.2 12l-4.8 3.8"/><path d="M13.4 4.6 10.6 19.4"/></symbol>
+    <symbol id="i-figma" viewBox="0 0 24 24"><rect x="4" y="3" width="8" height="7.5" rx="1.5"/><rect x="4" y="10.5" width="8" height="7.5" rx="1.5"/><path d="M4 20.4h8V20a4 4 0 0 1-8 0v-.4Z"/><circle cx="16" cy="6.75" r="3.75"/><circle cx="16" cy="14.25" r="3.75"/></symbol>
+    <symbol id="i-office" viewBox="0 0 24 24"><rect x="3" y="3" width="8.6" height="8.6" rx="1.4"/><rect x="12.4" y="3" width="8.6" height="8.6" rx="1.4"/><rect x="3" y="12.4" width="8.6" height="8.6" rx="1.4"/><rect x="12.4" y="12.4" width="8.6" height="8.6" rx="1.4"/></symbol>
+    <symbol id="i-dotnet" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3.5"/><rect x="8" y="8" width="8" height="8" rx="1.2"/></symbol>
+    <symbol id="i-win" viewBox="0 0 24 24"><path d="M3 5.6 10.4 4.5v7H3V5.6ZM13.4 4.2 21 3.1v8.4h-7.6V4.2ZM3 14.5h7.4v7L3 20.4v-5.9ZM13.4 14.5H21v8.8l-7.6-1.1v-7.7Z"/></symbol>
+    <symbol id="i-canva" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-.8 2-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-1 .8-1.8 1.8-1.8h.9A4.8 4.8 0 0 0 21 10.3C21 6.2 16.8 3 12 3Z"/><circle cx="7.6" cy="11.6" r="1.15"/><circle cx="11.1" cy="7.4" r="1.15"/><circle cx="15.6" cy="8.4" r="1.15"/></symbol>
+    <symbol id="i-gui" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13.5" rx="2"/><path d="M2.5 8h19"/><path d="M5.4 6h.01M7.6 6h.01"/><path d="M9 20.5h6M12 17.5v3"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M12 3.6 2.6 8.5 12 13.4l9.4-4.9L12 3.6Z"/><path d="M6.6 10.9v4.7c0 1.7 2.4 3.1 5.4 3.1s5.4-1.4 5.4-3.1v-4.7"/><path d="M20.6 9v5.2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3.5 7.5 8.5 6 8.5-6"/></symbol>
+    <symbol id="i-repo" viewBox="0 0 24 24"><path d="M3 7.4A1.6 1.6 0 0 1 4.6 5.8h3.9l2 2.5h8.9A1.6 1.6 0 0 1 21 9.9v8.5a1.6 1.6 0 0 1-1.6 1.6H4.6A1.6 1.6 0 0 1 3 18.4V7.4Z"/><path d="M3 11h18"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20c0-3.4 2.8-5.7 6.2-5.7s6.2 2.3 6.2 5.7"/><path d="M16.2 5.2a3.3 3.3 0 0 1 0 6M17.8 14.6c2 .8 3.4 2.6 3.4 5.4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.4A1.6 1.6 0 0 1 5.6 3.8H11v16.4H5.6A1.6 1.6 0 0 1 4 18.6V5.4Z"/><path d="M20 5.4a1.6 1.6 0 0 0-1.6-1.6H13v16.4h5.4a1.6 1.6 0 0 0 1.6-1.6V5.4Z"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 2.8c3.6 2.6 5.6 6.1 5.6 10.2l2.6 3.1-3.6 1-1.1 3.6-3.5-2.6H11l-3.5 2.6-1.1-3.6-3.6-1 2.6-3.1c0-4.1 2-7.6 6.6-10.2Z"/><circle cx="12" cy="10.6" r="1.9"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 3.6 3 6.1v14.3l6-2.5 6 2.5 6-2.5V3.6l-6 2.5-6-2.5Z"/><path d="M9 3.6v14.3M15 6.1v14.3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.8 12.6 4.9 4.9L19.4 6.8"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2.8v3.6M12 17.6v3.6M2.8 12h3.6M17.6 12h3.6M5.5 5.5 8.1 8.1M15.9 15.9l2.6 2.6M18.5 5.5 15.9 8.1M8.1 15.9l-2.6 2.6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.4 14.6A8.6 8.6 0 0 1 9.4 3.6a8.6 8.6 0 1 0 11 11Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9.5 5.5 7 6.5-7 6.5"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 3.6h6.4V10"/><path d="m20.4 3.6-8.2 8.2"/><path d="M18 14.2v5.2a1.6 1.6 0 0 1-1.6 1.6H4.6A1.6 1.6 0 0 1 3 19.4V7.6A1.6 1.6 0 0 1 4.6 6h5.2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.4" y="10.4" width="15.2" height="10.2" rx="2.4"/><path d="M8 10.4V7.6a4 4 0 0 1 8 0v2.8"/><path d="M12 14.6v2"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9.6" cy="19.4" r="1.5"/><circle cx="17.6" cy="19.4" r="1.5"/><path d="M2.6 3.6h2.6l2.6 11.4h10.4l1.9-7.6H6.2"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M5.6 3.4h12.8v17.2l-2.1-1.6-2.2 1.6-2.1-1.6-2.2 1.6-2.1-1.6-2.1 1.6V3.4Z"/><path d="M9 8.6h6M9 12.4h4"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7.6" height="7.6" rx="1.6"/><rect x="13.4" y="3" width="7.6" height="7.6" rx="1.6"/><rect x="3" y="13.4" width="7.6" height="7.6" rx="1.6"/><rect x="13.4" y="13.4" width="7.6" height="7.6" rx="1.6"/></symbol>
+    <symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="4.4" r="2"/><path d="M3.8 8.4h16.4"/><path d="M12 8.4v5.2M12 13.6l-2.9 7M12 13.6l2.9 7"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2.8 2.8 7.4 12 12l9.2-4.6L12 2.8Z"/><path d="m2.8 12.4 9.2 4.6 9.2-4.6"/><path d="m2.8 16.9 9.2 4.6 9.2-4.6"/></symbol>
+    <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="6.6" y="2.4" width="10.8" height="19.2" rx="2.6"/><path d="M10.6 18.6h2.8"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24"><rect x="2.5" y="6.8" width="19" height="13.4" rx="2.4"/><path d="M8.6 6.8V5.4A1.6 1.6 0 0 1 10.2 3.8h3.6a1.6 1.6 0 0 1 1.6 1.6v1.4"/><path d="M2.5 12.4h19"/><path d="M10.6 12.4h2.8v2.2h-2.8z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ══════════ SCROLL PROGRESS ══════════ -->
+<div class="progress" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">SN</span>
+      <span><span class="brand-path">~/</span>samnatad</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Section navigation">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#learning">journey</a>
+      <a href="#education">education</a>
+    </nav>
+
+    <div class="nav-tools">
+      <button class="btn btn-ico" id="themeBtn" type="button" aria-label="Switch to light theme" title="Toggle colour theme">
+        <svg class="icon icon-fill" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <button class="nav-burger" id="navBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════ HERO ══════════ -->
+<section class="section hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="pill">
+        <span class="dot" aria-hidden="true"></span>
+        2026 BSIT graduate &middot; seeking junior developer role
+      </p>
+
+      <h1 class="hero-h1">
+        <span class="gname">Sam Natad</span>
+      </h1>
+
+      <p class="hero-role">
+        Aspiring Software Engineer<span class="caret" aria-hidden="true">_</span>
+      </p>
+
+      <p class="hero-lede">
+        I learn by building. Three desktop apps in <b>Java</b> and <b>C#</b> for
+        school &mdash; plus this site, written from scratch in <b>HTML</b> and
+        <b>CSS</b>. I know I'm early in my career. I'd rather be upfront about that
+        than oversell it.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects">
+          <svg class="icon" aria-hidden="true"><use href="#i-repo"/></svg>
+          View projects
+        </a>
+        <a class="btn btn-line" href="https://github.com/SamNatad" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+          GitHub
+          <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg>
+        </a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <p class="stat-n">3</p>
+          <p class="stat-l">Projects built</p>
+        </div>
+        <div class="stat">
+          <p class="stat-n">9</p>
+          <p class="stat-l">Programs handled</p>
+        </div>
+        <div class="stat">
+          <p class="stat-n">2</p>
+          <p class="stat-l">Languages in depth</p>
+        </div>
+        <div class="stat">
+          <p class="stat-n">&infin;</p>
+          <p class="stat-l">Still learning</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terminal -->
+    <div class="term">
+      <div class="term-bar">
+        <span class="tdot" style="background:#ff5f57" aria-hidden="true"></span>
+        <span class="tdot" style="background:#febc2e" aria-hidden="true"></span>
+        <span class="tdot" style="background:#28c840" aria-hidden="true"></span>
+        <span class="term-file">
+          <svg class="icon" aria-hidden="true"><use href="#i-term"/></svg>
+          sam@portfolio
+        </span>
+      </div>
+      <div class="term-body" id="termBody" role="img"
+           aria-label="Terminal window. Running whoami returns Sam Natad, BSIT graduate 2026. A stack file lists Java, Swing, NetBeans, C#, .NET, Windows Forms, HTML, CSS and Git. A status file shows entry-level, learning true, open to work true.">
+        <div class="ln"><span class="pr">sam@portfolio</span><span class="cm">:~$</span> whoami</div>
+        <div class="ln"><span class="val">Sam Natad</span> <span class="cm">// BSIT, graduated 2026</span></div>
+        <div class="ln"><span class="pr">sam@portfolio</span><span class="cm">:~$</span> cat stack.txt</div>
+        <div class="ln">Java <span class="cm">·</span> Swing <span class="cm">·</span> NetBeans</div>
+        <div class="ln">C# <span class="cm">·</span> .NET <span class="cm">·</span> Windows Forms</div>
+        <div class="ln">HTML <span class="cm">·</span> CSS <span class="cm">·</span> Git</div>
+        <div class="ln"><span class="pr">sam@portfolio</span><span class="cm">:~$</span> cat status.json</div>
+        <div class="ln">{</div>
+        <div class="ln">  <span class="str">"level"</span>:       <span class="str">"entry-level"</span>,</div>
+        <div class="ln">  <span class="str">"shipping"</span>:    <span class="num">true</span>,</div>
+        <div class="ln">  <span class="str">"learning"</span>:    <span class="num">true</span>,</div>
+        <div class="ln">  <span class="str">"openToWork"</span>: <span class="num">true</span></div>
+        <div class="ln">}</div>
+        <div class="ln"><span class="pr">sam@portfolio</span><span class="cm">:~$</span> <span class="caret" aria-hidden="true"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag"><span class="slash">//</span> about</p>
+      <h2 class="sec-title">Where I'm at, stated plainly</h2>
+      <p class="sec-sub">Including the parts I haven't done yet.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="prose reveal">
+        <p>
+          I graduated with a <b>Bachelor of Science in Information Technology</b> in
+          2026. Most of what I actually know came from team projects, not lectures
+          &mdash; chiefly our seven-person capstone,
+          <span class="hl">BuildHub</span>, a desktop app for ordering PC parts.
+        </p>
+        <p>
+          I'm a <b>beginner-to-early-intermediate programmer</b>. I can build
+          complete working applications, and the fundamentals are solid.
+        </p>
+      </div>
+
+      <aside class="note reveal">
+        <h3 class="note-h">
+          <svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>
+          Working on right now
+        </h3>
+        <ul class="todo">
+          <li><span class="chk" aria-hidden="true"></span>Java fundamentals and cleaner OOP design</li>
+          <li><span class="chk" aria-hidden="true"></span>Data structures &amp; algorithms</li>
+          <li><span class="chk" aria-hidden="true"></span>Git workflow and branch hygiene</li>
+          <li><span class="chk" aria-hidden="true"></span>Semantic HTML and responsive CSS</li>
+          <li><span class="chk" aria-hidden="true"></span>SQL, so my apps stop losing data</li>
+          <li><span class="chk" aria-hidden="true"></span>Rewriting old code to see if I can improve it</li>
+        </ul>
+      </aside>
+    </div>
+
+    <details class="disc reveal" style="margin-top:var(--s5)">
+      <summary>
+        <svg class="icon icon-lead" aria-hidden="true"><use href="#i-book"/></svg>
+        The longer version &mdash; what I have and haven't done
+        <svg class="icon disc-chev" aria-hidden="true"><use href="#i-chev"/></svg>
+      </summary>
+      <div class="disc-body">
+        <p>
+          Our capstone taught me more than the syllabus did &mdash; how to read other
+          people's code, agree on scope, and handle the parts of a project nobody
+          hands you in a textbook. Alongside it I taught myself <b>C# and Windows
+          Forms</b> by building a student records system, mostly to check whether my
+          Java concepts would transfer to another language. They did.
+        </p>
+        <p>
+          To be straight about the gaps: I have <span class="hl">not</span> worked in
+          a professional engineering team, <span class="hl">not</span> shipped
+          software to real users, and <span class="hl">not</span> maintained a
+          production codebase. I'd rather tell you that now than have it come up in
+          an interview.
+        </p>
+        <p>
+          What I do have is the habit of finishing projects, asking questions early,
+          and picking up whatever the next task requires.
+        </p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ══════════ SKILLS ══════════ -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag"><span class="slash">//</span> skills</p>
+      <h2 class="sec-title">What I actually work with</h2>
+      <p class="sec-sub">Sorted by what I've genuinely used, not what I've read about.</p>
+    </div>
+
+    <div class="skill-block reveal">
+      <div class="skill-h">
+        <h3>Languages</h3>
+        <span class="meta">// used in a completed project</span>
+      </div>
+      <div class="badge-row">
+        <span class="tech" data-tier="work" data-brand="java"><svg class="icon" aria-hidden="true"><use href="#i-java"/></svg>Java</span>
+        <span class="tech" data-tier="work" data-brand="csharp"><svg class="icon" aria-hidden="true"><use href="#i-cs"/></svg>C#</span>
+        <span class="tech" data-tier="work" data-brand="html"><svg class="icon" aria-hidden="true"><use href="#i-html"/></svg>HTML5</span>
+        <span class="tech" data-tier="work" data-brand="css"><svg class="icon" aria-hidden="true"><use href="#i-css"/></svg>CSS3</span>
+        <span class="tech" data-tier="learn" data-brand="js"><svg class="icon" aria-hidden="true"><use href="#i-js"/></svg>JavaScript</span>
+        <span class="tech" data-tier="learn" data-brand="sql"><svg class="icon" aria-hidden="true"><use href="#i-sql"/></svg>SQL</span>
+      </div>
+    </div>
+
+    <div class="skill-block reveal">
+      <div class="skill-h">
+        <h3>Desktop UI</h3>
+        <span class="meta">// where most of my projects live</span>
+      </div>
+      <div class="badge-row">
+        <span class="tech" data-tier="work" data-brand="swing"><svg class="icon" aria-hidden="true"><use href="#i-gui"/></svg>Java Swing</span>
+        <span class="tech" data-tier="work" data-brand="winforms"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg>Windows Forms</span>
+        <span class="tech" data-tier="work" data-brand="netbeans"><svg class="icon" aria-hidden="true"><use href="#i-ide"/></svg>NetBeans GUI Designer</span>
+        <span class="tech" data-tier="work"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg>UI design principles</span>
+      </div>
+    </div>
+
+    <div class="skill-block reveal">
+      <div class="skill-h">
+        <h3>IDEs &amp; editors</h3>
+        <span class="meta">// where I write</span>
+      </div>
+      <div class="badge-row">
+        <span class="tech" data-tier="work" data-brand="vs"><svg class="icon" aria-hidden="true"><use href="#i-vs"/></svg>Visual Studio</span>
+        <span class="tech" data-tier="work" data-brand="vsc"><svg class="icon" aria-hidden="true"><use href="#i-vsc"/></svg>Visual Studio Code</span>
+        <span class="tech" data-tier="work" data-brand="netbeans"><svg class="icon" aria-hidden="true"><use href="#i-ide"/></svg>NetBeans 22</span>
+      </div>
+    </div>
+
+    <div class="skill-block reveal">
+      <div class="skill-h">
+        <h3>Runtimes &amp; platform</h3>
+        <span class="meta">// what it all runs on</span>
+      </div>
+      <div class="badge-row">
+        <span class="tech" data-tier="work" data-brand="java"><svg class="icon" aria-hidden="true"><use href="#i-java"/></svg>JDK 22</span>
+        <span class="tech" data-tier="work" data-brand="dotnet"><svg class="icon" aria-hidden="true"><use href="#i-dotnet"/></svg>.NET 10</span>
+        <span class="tech" data-tier="work" data-brand="windows"><svg class="icon" aria-hidden="true"><use href="#i-win"/></svg>Windows</span>
+      </div>
+    </div>
+
+    <div class="skill-block reveal">
+      <div class="skill-h">
+        <h3>Version control &amp; productivity</h3>
+        <span class="meta">// day to day</span>
+      </div>
+      <div class="badge-row">
+        <span class="tech" data-tier="work" data-brand="git"><svg class="icon" aria-hidden="true"><use href="#i-git"/></svg>Git</span>
+        <span class="tech" data-tier="work" data-brand="github"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</span>
+        <span class="tech" data-tier="work" data-brand="office"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-office"/></svg>Microsoft Office</span>
+      </div>
+    </div>
+
+    <div class="skill-block reveal">
+      <div class="skill-h">
+        <h3>Design</h3>
+        <span class="meta">// layout, mockups, docs</span>
+      </div>
+      <div class="badge-row">
+        <span class="tech" data-tier="work" data-brand="figma"><svg class="icon" aria-hidden="true"><use href="#i-figma"/></svg>Figma</span>
+        <span class="tech" data-tier="work" data-brand="canva"><svg class="icon" aria-hidden="true"><use href="#i-canva"/></svg>Canva</span>
+      </div>
+    </div>
+
+    <div class="skill-block reveal">
+      <div class="skill-h">
+        <h3>Concepts</h3>
+        <span class="meta">// applied, not just read</span>
+      </div>
+      <div class="badge-row">
+        <span class="tech" data-tier="work"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>Object-oriented programming</span>
+        <span class="tech" data-tier="work"><svg class="icon" aria-hidden="true"><use href="#i-mobile"/></svg>Event-driven programming</span>
+        <span class="tech" data-tier="work"><svg class="icon" aria-hidden="true"><use href="#i-cart"/></svg>Data structures</span>
+        <span class="tech" data-tier="work"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg>Basic algorithms &amp; logic</span>
+        <span class="tech" data-tier="work"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Role-based access control</span>
+        <span class="tech" data-tier="work"><svg class="icon" aria-hidden="true"><use href="#i-access"/></svg>Web accessibility</span>
+        <span class="tech" data-tier="work"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>Team collaboration</span>
+      </div>
+    </div>
+
+    <div class="legend reveal">
+      <span><i class="k-work" aria-hidden="true"></i> Working knowledge &mdash; used in a project I finished</span>
+      <span><i class="k-learn" aria-hidden="true"></i> Currently learning &mdash; early stage, no project yet</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROJECTS ══════════ -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag"><span class="slash">//</span> projects</p>
+      <h2 class="sec-title">Things I built</h2>
+      <p class="sec-sub">Academic, coursework, and self-directed. Descriptions match what the code does.</p>
+    </div>
+
+    <div class="projects">
+
+      <!-- 01 -->
+      <article class="proj reveal">
+        <div class="proj-in">
+          <div class="proj-top">
+            <h3 class="proj-name">
+              <svg class="icon" aria-hidden="true"><use href="#i-cart"/></svg>
+              BuildHub
+              <span class="flag flag-academic">Academic &middot; Team of 7</span>
+            </h3>
+            <span class="flag">Java &middot; Swing</span>
+          </div>
+
+          <p class="proj-desc">
+            My capstone &mdash; a desktop app for browsing and ordering PC parts.
+            Customers register, verify their account, build a cart, and pay with
+            change calculated live.
+          </p>
+
+          <details class="disc">
+            <summary>
+              <svg class="icon icon-lead" aria-hidden="true"><use href="#i-code"/></svg>
+              What I built
+              <span class="disc-count">8</span>
+              <svg class="icon disc-chev" aria-hidden="true"><use href="#i-chev"/></svg>
+            </summary>
+            <div class="disc-body">
+              <ul class="feat">
+                <li><b>Account sign-up</b> with OTP verification and password reset</li>
+                <li>Login screens for account, Gmail, and Facebook sign-in</li>
+                <li>Catalogue: monitors, keyboards, RAM, motherboards, GPUs, cases, prebuilt systems</li>
+                <li>Cart on a <code>JTable</code> with live quantity and price updates</li>
+                <li>Payment flow computing subtotal, total, and balance due</li>
+                <li>Receipt generation with a printable order summary</li>
+                <li>Profile, settings, and log-out screens</li>
+                <li>24 Java classes across login, catalogue, cart, and checkout</li>
+              </ul>
+            </div>
+          </details>
+
+          <div class="proj-foot">
+            <span class="tech" data-tier="work" data-brand="java"><svg class="icon" aria-hidden="true"><use href="#i-java"/></svg>Java</span>
+            <span class="tech" data-tier="work" data-brand="swing"><svg class="icon" aria-hidden="true"><use href="#i-gui"/></svg>Swing</span>
+            <span class="tech" data-tier="work" data-brand="netbeans"><svg class="icon" aria-hidden="true"><use href="#i-ide"/></svg>NetBeans 22</span>
+            <span class="tech" data-tier="work" data-brand="java"><svg class="icon" aria-hidden="true"><use href="#i-java"/></svg>JDK 22</span>
+          </div>
+
+          <p class="disclosure">
+            Group project &mdash; built with seven of us, not solo work. Documentation
+            and certificates are published
+            <a href="https://www.facebook.com/share/v/1A3k5kKv9E/" target="_blank" rel="noopener noreferrer">here</a>.
+            Credentials are hardcoded and nothing is persisted to a database.
+          </p>
+
+          <details class="disc" style="margin-top:var(--s3)">
+            <summary>
+              <svg class="icon icon-lead" aria-hidden="true"><use href="#i-code"/></svg>
+              OOP concepts in the code
+              <span class="disc-count">verified</span>
+              <svg class="icon disc-chev" aria-hidden="true"><use href="#i-chev"/></svg>
+            </summary>
+            <div class="disc-body">
+              <div class="evidence">
+                <div class="ev"><b>24</b><span>classes</span></div>
+                <div class="ev"><b>22</b><span>extend JFrame</span></div>
+                <div class="ev"><b>387</b><span>private fields</span></div>
+                <div class="ev"><b>99</b><span>event listeners</span></div>
+              </div>
+              <ul class="feat">
+                <li><b>Inheritance</b> &mdash; 22 window classes extend <code>JFrame</code></li>
+                <li><b>Encapsulation</b> &mdash; all components private, behaviour via public methods</li>
+                <li><b>Polymorphism</b> &mdash; 99 anonymous <code>ActionListener</code> objects dispatching on event</li>
+                <li><b>Constructors</b> &mdash; 20, each calling <code>initComponents()</code></li>
+                <li><b>Methods</b> &mdash; 164, including <code>addtable()</code> and <code>cal()</code></li>
+                <li><b>Not present:</b> custom interfaces, abstract classes, or method overloading &mdash; zero authored</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="disc" style="margin-top:var(--s3)">
+            <summary>
+              <svg class="icon icon-lead" aria-hidden="true"><use href="#i-gui"/></svg>
+              Screenshots
+              <span class="disc-count">3</span>
+              <svg class="icon disc-chev" aria-hidden="true"><use href="#i-chev"/></svg>
+            </summary>
+            <div class="disc-body">
+              <div class="shots">
+                <figure class="shot">
+                  <a href="img/buildhub-1.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="img/buildhub-1.jpg" alt="BuildHub application screenshot" loading="lazy" width="400" height="250">
+                  </a>
+                  <figcaption>App &mdash; 1</figcaption>
+                </figure>
+                <figure class="shot">
+                  <a href="img/buildhub-2.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="img/buildhub-2.jpg" alt="BuildHub application screenshot, second view" loading="lazy" width="400" height="250">
+                  </a>
+                  <figcaption>App &mdash; 2</figcaption>
+                </figure>
+                <figure class="shot">
+                  <a href="img/buildhub-certificate.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="img/buildhub-certificate.jpg" alt="BuildHub documentation and certificate" loading="lazy" width="400" height="250">
+                  </a>
+                  <figcaption>Certificate</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article class="proj reveal">
+        <div class="proj-in">
+          <div class="proj-top">
+            <h3 class="proj-name">
+              <svg class="icon" aria-hidden="true"><use href="#i-gui"/></svg>
+              Student Records System
+              <span class="flag flag-academic">Academic &middot; Final Project</span>
+            </h3>
+            <span class="flag">C# &middot; .NET 10</span>
+          </div>
+
+          <p class="proj-desc">
+            A Windows desktop app for managing student records, built as a final
+            project with one classmate. Opens on a role selector and organises
+            students by program.
+          </p>
+
+          <details class="disc">
+            <summary>
+              <svg class="icon icon-lead" aria-hidden="true"><use href="#i-code"/></svg>
+              What I built
+              <span class="disc-count">7</span>
+              <svg class="icon disc-chev" aria-hidden="true"><use href="#i-chev"/></svg>
+            </summary>
+            <div class="disc-body">
+              <ul class="feat">
+                <li><b>Role-based login</b> for Student, Faculty, and Admin</li>
+                <li>Tabbed interface covering <b>nine programs</b>: BSIT, BSBA, BSN, BSCE, BSEE, BSCJ, BSHM, BSED, SHS</li>
+                <li>Record entry for ID, name, age, gender, address, email</li>
+                <li>Edit and save flows with form validation</li>
+                <li>Logout with confirmation prompt</li>
+                <li>Roughly <b>2,500 lines</b> of C# across the form logic</li>
+                <li>First real experience working in someone else's codebase</li>
+              </ul>
+            </div>
+          </details>
+
+          <div class="proj-foot">
+            <span class="tech" data-tier="work" data-brand="csharp"><svg class="icon" aria-hidden="true"><use href="#i-cs"/></svg>C#</span>
+            <span class="tech" data-tier="work" data-brand="dotnet"><svg class="icon" aria-hidden="true"><use href="#i-dotnet"/></svg>.NET 10</span>
+            <span class="tech" data-tier="work" data-brand="winforms"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg>Windows Forms</span>
+            <span class="tech" data-tier="work" data-brand="vs"><svg class="icon" aria-hidden="true"><use href="#i-vs"/></svg>Visual Studio</span>
+          </div>
+
+          <p class="disclosure">
+            Two-person final project. Data is held in the running application and is
+            not yet persisted to a database &mdash; something I plan to fix next.
+          </p>
+        </div>
+      </article>
+
+      <!-- 03 -->
+      <article class="proj reveal">
+        <div class="proj-in">
+          <div class="proj-top">
+            <h3 class="proj-name">
+              <svg class="icon" aria-hidden="true"><use href="#i-receipt"/></svg>
+              Simple POS
+              <span class="flag flag-personal">Practice</span>
+            </h3>
+            <span class="flag">Java &middot; Swing</span>
+          </div>
+
+          <p class="proj-desc">
+            A small fast-food POS I built for practice, mimicking a counter ordering
+            screen. Written to get comfortable with Swing events and table models.
+          </p>
+
+          <details class="disc">
+            <summary>
+              <svg class="icon icon-lead" aria-hidden="true"><use href="#i-code"/></svg>
+              What I built
+              <span class="disc-count">6</span>
+              <svg class="icon disc-chev" aria-hidden="true"><use href="#i-chev"/></svg>
+            </summary>
+            <div class="disc-body">
+              <ul class="feat">
+                <li>Nine menu items, each a button with its own product image</li>
+                <li>Per-item quantity controls before adding to the order</li>
+                <li><code>JTable</code> order list that recalculates subtotals on every add</li>
+                <li>Automatic total and change / balance computation</li>
+                <li>Receipt text area for the finished order</li>
+                <li>Row replacement so re-adding an item updates quantity</li>
+              </ul>
+            </div>
+          </details>
+
+          <div class="proj-foot">
+            <span class="tech" data-tier="work" data-brand="java"><svg class="icon" aria-hidden="true"><use href="#i-java"/></svg>Java</span>
+            <span class="tech" data-tier="work" data-brand="swing"><svg class="icon" aria-hidden="true"><use href="#i-gui"/></svg>Swing</span>
+            <span class="tech" data-tier="work" data-brand="netbeans"><svg class="icon" aria-hidden="true"><use href="#i-ide"/></svg>NetBeans</span>
+          </div>
+
+          <p class="disclosure">
+            Known unfinished: the program's entry point isn't wired up to the window
+            yet, so it won't launch from the main class as-is.
+          </p>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="proj reveal">
+        <div class="proj-in">
+          <div class="proj-top">
+            <h3 class="proj-name">
+              <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>
+              This Portfolio
+              <span class="flag flag-personal">Self-directed</span>
+            </h3>
+            <span class="flag">HTML &middot; CSS</span>
+          </div>
+
+          <p class="proj-desc">
+            The page you're on. Built from an empty file instead of a template, so
+            I'd actually understand how layout works.
+          </p>
+
+          <details class="disc">
+            <summary>
+              <svg class="icon icon-lead" aria-hidden="true"><use href="#i-code"/></svg>
+              What I built
+              <span class="disc-count">7</span>
+              <svg class="icon disc-chev" aria-hidden="true"><use href="#i-chev"/></svg>
+            </summary>
+            <div class="disc-body">
+              <ul class="feat">
+                <li>Semantic HTML5 with landmarks and labelled sections</li>
+                <li>Custom CSS design system &mdash; variables, Grid, Flexbox</li>
+                <li>Mobile-first responsive layout down to small screens</li>
+                <li>Light and dark themes, preference saved locally</li>
+                <li>Keyboard navigation, skip link, visible focus states</li>
+                <li>Respects reduced-motion and print preferences</li>
+                <li>Inline SVG icon set &mdash; no icon fonts, no CDN, no build step</li>
+              </ul>
+            </div>
+          </details>
+
+          <div class="proj-foot">
+            <span class="tech" data-tier="work" data-brand="html"><svg class="icon" aria-hidden="true"><use href="#i-html"/></svg>HTML5</span>
+            <span class="tech" data-tier="work" data-brand="css"><svg class="icon" aria-hidden="true"><use href="#i-css"/></svg>CSS3</span>
+            <span class="tech" data-tier="work" data-brand="js"><svg class="icon" aria-hidden="true"><use href="#i-js"/></svg>Vanilla JS</span>
+            <span class="tech" data-tier="work"><svg class="icon" aria-hidden="true"><use href="#i-mobile"/></svg>Responsive</span>
+            <span class="tech" data-tier="work"><svg class="icon" aria-hidden="true"><use href="#i-access"/></svg>Accessible</span>
+          </div>
+
+          <p class="disclosure">
+            No frameworks, no page builders, no generated code.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ LEARNING JOURNEY ══════════ -->
+<section class="section" id="learning">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag"><span class="slash">//</span> continuous-learning</p>
+      <h2 class="sec-title">The learning journey</h2>
+      <p class="sec-sub">Documented in public, because it keeps me honest about my level.</p>
+    </div>
+
+    <div class="tline">
+      <div class="tl reveal">
+        <p class="tl-when">Foundation</p>
+        <p class="tl-what">BSIT, first year</p>
+        <p class="tl-note">Logic, OOP, data structures, computing theory.</p>
+      </div>
+
+      <div class="tl reveal">
+        <p class="tl-when">Applied</p>
+        <p class="tl-what">Java and Swing apps</p>
+        <p class="tl-note">Event-driven programming stopped being abstract here.</p>
+      </div>
+
+      <div class="tl reveal">
+        <p class="tl-when">Capstone</p>
+        <p class="tl-what">BuildHub &mdash; team of 7</p>
+        <p class="tl-note">Scope, merging code, building features others designed.</p>
+      </div>
+
+      <div class="tl reveal">
+        <p class="tl-when">Expanded</p>
+        <p class="tl-what">C# and Windows Forms</p>
+        <p class="tl-note">Testing whether the Java concepts actually transferred.</p>
+      </div>
+
+      <div class="tl now reveal">
+        <p class="tl-when">Now &middot; Oct 2026 <span class="tl-now-badge">CURRENT</span></p>
+        <p class="tl-what">Web fundamentals, cleaner code</p>
+        <p class="tl-note">
+          HTML and CSS properly, data structures and algorithms, and rewriting my old
+          code to see how much cleaner I can get it.
+        </p>
+      </div>
+
+      <div class="tl next reveal">
+        <p class="tl-when">Next</p>
+        <p class="tl-what">SQL and a real backend</p>
+        <p class="tl-note">So my apps stop losing everything on close.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EDUCATION ══════════ -->
+<section class="section" id="education">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag"><span class="slash">//</span> education</p>
+      <h2 class="sec-title">Academic background</h2>
+      <p class="sec-sub">My degree, and the practical work that came with it.</p>
+    </div>
+
+    <div class="edu">
+      <div class="edu-card reveal">
+        <div class="edu-ico" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-cap"/></svg></div>
+        <div>
+          <p class="edu-deg">BSIT &mdash; Bachelor of Science in Information Technology</p>
+          <p class="edu-org">
+            <svg class="icon" style="width:13px;height:13px" aria-hidden="true"><use href="#i-check"/></svg>
+            Graduated 2026
+          </p>
+          <p class="edu-txt">
+            Programming fundamentals, OOP, data structures, networking, and databases
+            &mdash; with practical team experience in Java.
+          </p>
+        </div>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-ico" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-book"/></svg></div>
+        <div>
+          <p class="edu-deg">Capstone &amp; academic projects</p>
+          <p class="edu-org">
+            <svg class="icon" style="width:13px;height:13px" aria-hidden="true"><use href="#i-users"/></svg>
+            Team projects
+          </p>
+          <p class="edu-txt">
+            A seven-member capstone in Java, and a final C#/.NET app with a classmate.
+            Both involved planning, dividing work, and demoing a working program.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-tag"><span class="slash">//</span> contact</p>
+      <h2 class="sec-title">Get in touch</h2>
+      <p class="sec-sub">
+        Open to a junior developer role, an internship, or a mentor who doesn't mind
+        beginner questions.
+      </p>
+    </div>
+
+    <div class="contact-grid reveal">
+      <a class="c-card" href="https://github.com/SamNatad" target="_blank" rel="noopener noreferrer">
+        <span class="c-ico" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-github"/></svg></span>
+        <span>
+          <span class="c-t">GitHub</span>
+          <span class="c-s">@SamNatad</span>
+        </span>
+      </a>
+
+      <a class="c-card" href="https://github.com/SamNatad?tab=repositories" target="_blank" rel="noopener noreferrer">
+        <span class="c-ico" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-repo"/></svg></span>
+        <span>
+          <span class="c-t">Repositories</span>
+          <span class="c-s">see my code</span>
+        </span>
+      </a>
+
+      <a class="c-card" href="mailto:your-email@example.com">
+        <span class="c-ico" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-mail"/></svg></span>
+        <span>
+          <span class="c-t">Email</span>
+          <span class="c-s">add your address</span>
+        </span>
+      </a>
+
+      <div class="c-card">
+        <span class="c-ico" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-brief"/></svg></span>
+        <span>
+          <span class="c-t">Availability</span>
+          <span class="c-s">open to junior roles</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>&copy; <span id="yr">2026</span> Sam Natad &middot; BSIT 2026 &middot; Aspiring Software Engineer</p>
+    <p>Hand-written HTML + CSS. <a href="#top">Back to top &uarr;</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var $ = function (s) { return document.querySelector(s); };
+
+  /* ---- Footer year ---- */
+  $("#yr").textContent = new Date().getFullYear();
+
+  /* ---- Theme toggle (persisted) ---- */
+  var root = document.documentElement, themeBtn = $("#themeBtn");
+  var saved = null;
+  try { saved = localStorage.getItem("sam-theme"); } catch (e) {}
+
+  function paint(theme) {
+    var light = theme === "light";
+    root.setAttribute("data-theme", theme);
+    themeBtn.querySelector("use").setAttribute("href", light ? "#i-sun" : "#i-moon");
+    themeBtn.setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme");
+  }
+
+  paint(saved === "light" ? "light" : "dark");
+
+  themeBtn.addEventListener("click", function () {
+    var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    paint(next);
+    try { localStorage.setItem("sam-theme", next); } catch (e) {}
+  });
+
+  /* ---- Mobile nav ---- */
+  var navBtn = $("#navBtn"), nav = $("#navLinks");
+
+  navBtn.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    navBtn.setAttribute("aria-expanded", String(open));
+  });
+
+  nav.addEventListener("click", function (e) {
+    if (e.target.closest("a")) {
+      nav.classList.remove("open");
+      navBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  /* ---- Scroll progress bar ---- */
+  var bar = $("#progressBar");
+  var ticking = false;
+
+  function updateProgress() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + "%";
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(updateProgress); }
+  }, { passive: true });
+
+  updateProgress();
+
+  /* ---- Terminal: reveal lines in sequence ---- */
+  var term = $("#termBody"), lines = term.querySelectorAll(".ln");
+
+  function typeLines() {
+    term.classList.add("is-typed");
+    [].forEach.call(lines, function (ln, i) {
+      ln.style.animationDelay = (i * 55) + "ms";
+    });
+  }
+
+  if ("IntersectionObserver" in window) {
+    var termIO = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { typeLines(); termIO.disconnect(); }
+    }, { threshold: 0.25 });
+    termIO.observe(term);
+  } else {
+    typeLines();
+  }
+
+  /* ---- Scroll reveal ---- */
+  var reveal = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    var revealIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          revealIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+
+    reveal.forEach(function (el) {
+      el.style.transitionDelay = (Math.min(Array.prototype.indexOf.call(reveal, el), 5) * 55) + "ms";
+      revealIO.observe(el);
+    });
+  } else {
+    [].forEach.call(reveal, function (el) { el.classList.add("in"); });
+  }
+
+  /* ---- Active nav link ---- */
+  var links = Array.prototype.slice.call(nav.querySelectorAll("a"));
+  var sections = links.map(function (a) { return document.querySelector(a.getAttribute("href")); }).filter(Boolean);
+
+  if ("IntersectionObserver" in window && sections.length) {
+    var navIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (a) {
+          a.classList.toggle("on", a.getAttribute("href") === "#" + entry.target.id);
+        });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+
+    sections.forEach(function (s) { navIO.observe(s); });
+  }
+})();
+</script>
+
+</body>
+</html>
